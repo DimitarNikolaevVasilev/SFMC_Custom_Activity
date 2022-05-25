@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Custom Activity</title>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/postmonger.js"></script>
+<script type="text/javascript" src="customActivity.js"></script>
+<link rel="stylesheet" type="text/css" href="css/salesforce-lightning-design-system.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div id="step1" class="step">
+
+	<div class="slds-form-element">
+		<label class="slds-form-element__label" for="type">Tipo</label>
+		<div class="slds-form-element__control">
+			<div class="slds-select_container">
+				<select class="slds-select" id="type" name="type">
+					<option value="POST">Agregar al grupo</option>
+					<option value="DELETE">Eliminar del grupo</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="slds-form-element">
+		<label class="slds-form-element__label" for="groupId">ID del grupo(<font style="color:red">*</font>)</label>
+		<div class="slds-form-element__control">
+			<input type="text" id="groupId" name="groupId" placeholder="ID" class="slds-input"/>
+		</div>
+	</div>
+
+	<div class="slds-form-element">
+		<label class="slds-form-element__label" for="days">Número de días antes de expirar(<font style="color:red">*</font>)</label>
+		<div class="slds-form-element__control">
+			<input type="number" id="days" name="days" placeholder="Días" class="slds-input" maxlength="3" />
+		</div>
+	</div>
+
+
+
+	<div id="error_div" class="slds-input slds-input_bare slds-p-around_none"></div>
+</div>
+<div id="popup"></div>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

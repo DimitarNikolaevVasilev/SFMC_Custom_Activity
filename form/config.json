@@ -1,0 +1,74 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "version": "2.1",
+    "icon": "images/icon.png",
+    "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Custom Activity",
+      "description": "Custom Activity"
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [
+        {
+          "playerId": "{{Contact.Attribute.Test_CA.ID}}"
+        }
+      ],
+      "outArguments": [
+      ],
+      "url": "https://sfmc-custom-activity11.herokuapp.com/execute",
+      "useJwt": true,
+      "body": "",
+      "method": "POST"
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "486ad3cc-bc11-44d3-89f0-08eb27820948",
+    "save": {
+      "url": "https://sfmc-custom-activity11.herokuapp.com/save",
+      "verb": "POST",
+      "body": "",
+      "useJwt": true
+    },
+    "publish": {
+      "url": "https://sfmc-custom-activity11.herokuapp.com/publish",
+      "verb": "POST",
+      "body": "",
+      "useJwt": true
+    },
+    "validate": {
+      "url": "https://sfmc-custom-activity11.herokuapp.com/validate",
+      "verb": "POST",
+      "body": "",
+      "useJwt": true
+    }
+  },
+  "wizardSteps": [
+    {
+      "label": "Configurar",
+      "key": "step1"
+    }
+  ],
+  "userInterfaces": {
+    "configModal": {
+      "height": 600,
+      "width": 700,
+      "fullscreen": false
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [
+        ],
+        "outArguments": [
+        ]
+      }
+    }
+  }
+}
